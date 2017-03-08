@@ -1,0 +1,52 @@
+<%= form_for(jogo) do |f| %>
+  <% if jogo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jogo.errors.count, "error") %> prohibited this jogo from being saved:</h2>
+
+      <ul>
+      <% jogo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %>
+    <%= f.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :genero %>
+    <%= f.text_field :genero %>
+  </div>
+
+  <div class="field">
+    <%= f.label :desenvolvedora %>
+    <%= f.text_field :desenvolvedora %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ano %>
+    <%= f.number_field :ano %>
+  </div>
+
+  <div class="field">
+    <%= f.label :plataforma %>
+    <%= f.text_field :plataforma %>
+  </div>
+
+  <div class="field">
+    <%= f.label :preco %>
+    <%= f.text_field :preco %>
+  </div>
+
+  <div class="field">
+    <%= f.label :qtdEstoque %>
+    <%= f.number_field :qtdEstoque %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
