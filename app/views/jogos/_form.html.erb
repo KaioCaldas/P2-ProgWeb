@@ -46,6 +46,13 @@
     <%= f.number_field :qtdEstoque %>
   </div>
 
+  <div>
+    <%= f.label :foto %>
+    <%= image_tag @jogo.foto_url, class: 'foto' if @jogo.foto? %>
+    <%= f.file_field :foto, label: 'Foto' , input_html: {accept: ('application/jpg')} %>
+    <br/>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
