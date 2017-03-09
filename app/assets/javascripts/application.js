@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+  $('.datepicker').datepicker({format: 'dd-mm-yyyy'});
+  $('#preco').inputmask("000.00");  
+});

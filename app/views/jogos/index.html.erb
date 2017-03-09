@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Foto</th>
       <th>Titulo</th>
       <th>Genero</th>
       <th>Desenvolvedora</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @jogos.each do |jogo| %>
       <tr>
+        <td><%= image_tag jogo.foto, height: '80', width: '60'%></td>
         <td><%= jogo.titulo %></td>
         <td><%= jogo.genero %></td>
         <td><%= jogo.desenvolvedora %></td>
