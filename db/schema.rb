@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170308234150) do
+ActiveRecord::Schema.define(version: 20170315221939) do
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20170308234150) do
     t.float    "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "jogo_id"
+    t.integer  "cliente_id"
   end
 
 end
