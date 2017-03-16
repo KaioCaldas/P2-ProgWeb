@@ -71,4 +71,13 @@ class VendasController < ApplicationController
     def venda_params
       params.require(:venda).permit(:dataVenda, :total, :cliente_id, :jogo_id)
     end
+    def get_preco
+      @jogos = Jogo.all
+        jogos.each do |jogo|
+          if jogo.id == venda.jogo_id
+            jogo.preco
+          end
+        end
+    end
+
 end
