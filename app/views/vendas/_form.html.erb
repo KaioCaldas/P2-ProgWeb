@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :jogo %>
-    <%= f.collection_select :jogo_id, Jogo.all, :id, :titulo %>
+    <%= f.collection_select :jogo_id, Jogo.all, :id, :titulo, :selected => @venda.jogo_id%>
   </div>
 
   <div class="field">
