@@ -9,12 +9,25 @@
   </head>
 
   <body>
-  <h2>INSIRA UM MENU AQUI<H2>
   	<hr/>
   	<%= link_to 'Jogos', jogos_path %>
-	<%= link_to 'Clientes', clientes_path%>
-	<%= link_to 'Vendas', vendas_path %>
-	<hr/>
-    <%= yield %>
+  	<%= link_to 'Clientes', clientes_path%>
+  	<%= link_to 'Vendas', vendas_path %>
+  	<hr/>
+      <%= render "layouts/navbar" %>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <%= render "layouts/latbar" %>
+          </div>
+          <div class="col-md-10">
+            <div class="panel-body">
+              <%= yield %>
+              <p class="notice"><%= notice %></p>
+              <p class="alert"><%= alert %></p>
+            </div>
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
   </body>
 </html>
