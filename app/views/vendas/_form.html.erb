@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :dataVenda %>
-    <%= f.date_select :dataVenda %>
+    <%= f.text_field :dataVenda , class: 'datepicker' %>
   </div>
 
   <div class="field">
@@ -26,12 +26,16 @@
     <%= f.collection_select :jogo_id, Jogo.all, :id, :titulo, :selected => @venda.jogo%>
   </div>
 
-  <div class="field">
-    <%= f.label :total %>
-    <%= f.text_field :total , :value => venda.jogo.preco if venda.jogo %>
-  </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    $('.datepicker').datepicker({format: 'dd-mm-yyyy'});
+  });
+
+</script>

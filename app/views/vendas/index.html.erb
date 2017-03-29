@@ -19,7 +19,7 @@
         <td><%= venda.dataVenda %></td>
         <td><%= venda.jogo.titulo if venda.jogo %></td>
         <td><%= venda.cliente.nome if venda.cliente %></td>
-        <td><%= venda.total %></td>
+        <td><%= venda.jogo.try(:preco) %></td>
         <td><%= link_to '', venda , class: "glyphicon glyphicon-sunglasses" %></td>
         <td><%= link_to '', edit_venda_path(venda), class: "glyphicon glyphicon-pencil" %></td>
         <td><%= link_to '', venda, method: :delete, data: { confirm: 'Tem certeza?' }, class: "glyphicon glyphicon-erase" %></td>

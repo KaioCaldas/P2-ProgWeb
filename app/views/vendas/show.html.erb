@@ -7,7 +7,7 @@
 
 <p>
   <strong>Total:</strong>
-  <%= @venda.total %>
+  <%= @venda.jogo.try(:preco) %>
 </p>
 
 <%= link_to 'Edit', edit_venda_path(@venda) %> |
