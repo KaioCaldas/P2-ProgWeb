@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= f.label :jogo %>
-    <%= f.collection_select :jogo_id, Jogo.all, :id, :titulo, :selected => @venda.jogo_id%>
+    <%= f.collection_select :jogo_id, Jogo.all, :id, :titulo, :selected => @venda.jogo%>
   </div>
 
   <div class="field">
     <%= f.label :total %>
-    <%= f.text_field :total , :value => venda.get_preco %>
+    <%= f.text_field :total , :value => venda.jogo.preco if venda.jogo %>
   </div>
 
   <div class="actions">

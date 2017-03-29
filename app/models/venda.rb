@@ -1,4 +1,4 @@
-class Venda < ApplicationRecord
+class Venda < ActiveRecord::Base
 
 	def get_preco
       @jogos = Jogo.all
@@ -8,4 +8,7 @@ class Venda < ApplicationRecord
           end
         end
     end
+
+    belongs_to :jogo
+    belongs_to :cliente
 end

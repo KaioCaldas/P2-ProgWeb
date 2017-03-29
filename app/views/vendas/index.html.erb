@@ -17,8 +17,8 @@
     <% @vendas.each do |venda| %>
       <tr>
         <td><%= venda.dataVenda %></td>
-        <td><%= venda.jogo_id %></td>
-        <td><%= venda.cliente_id %></td>
+        <td><%= venda.jogo.titulo if venda.jogo %></td>
+        <td><%= venda.cliente.nome if venda.cliente %></td>
         <td><%= venda.total %></td>
         <td><%= link_to 'Show', venda %></td>
         <td><%= link_to 'Edit', edit_venda_path(venda) %></td>

@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Jogos</h1>
+<hr/>
+  <%= render 'formbusca' %>
+<hr/>
 
 <table>
   <thead>
@@ -10,7 +13,7 @@
       <th>Genero</th>
       <th>Plataforma</th>
       <th>Preco</th>
-      <th>Ações</th>
+      <th colspan="3">Ações</th>
     </tr>
   </thead>
 
@@ -28,14 +31,15 @@
         <td><%= jogo.genero %></td>
         <td><%= jogo.plataforma %></td>
         <td><%= jogo.preco %></td>
-        <td><%= link_to 'Show', jogo %><br>
-        <%= link_to 'Edit', edit_jogo_path(jogo) %><br>
-        <%= link_to 'Destroy', jogo, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <td><%= link_to ' ', jogo , class: "glyphicon glyphicon-sunglasses" %></td>
+        <td><%= link_to ' ', edit_jogo_path(jogo), class: "glyphicon glyphicon-pencil" %></td>
+        <td><%= link_to ' ', jogo, method: :delete, data: { confirm: 'Tem certeza?' }, class: "glyphicon glyphicon-erase" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<%= will_paginate @livros, previous_label: "Anterior", next_label: "Próxima" %>
+<br>
 <%= link_to 'New Jogo', new_jogo_path %>

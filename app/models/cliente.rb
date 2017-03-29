@@ -1,2 +1,2 @@
-class Cliente < ApplicationRecord
+class Cliente < ActiveRecord::Base
 end

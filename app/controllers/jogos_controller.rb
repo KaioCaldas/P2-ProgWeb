@@ -7,6 +7,19 @@ class JogosController < ApplicationController
     @jogos = Jogo.all
   end
 
+  def index
+    @ptitulo = params[:ptitulo]
+
+    filtro = "1=1"
+
+    if not(@ptitulo.nil?)
+      filtro = filtro + " and titulo like '%"+@ptitulo+"%'"
+    end  
+
+    @jogos = Jogo.where(filtro).order("titulo").paginate(page:
+      params[:page], per_page: 3)
+  end
+
   # GET /jogos/1
   # GET /jogos/1.json
   def show
