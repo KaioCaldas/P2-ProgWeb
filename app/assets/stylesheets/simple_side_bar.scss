@@ -14,10 +14,6 @@
     transition: all 0.5s ease;
 }
 
-#wrapper.toggled {
-    padding-left: 250px;
-}
-
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
@@ -98,7 +94,6 @@
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
     }
 
     #wrapper.toggled {

@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Jogos</h1>
-<hr/>
-  <%= render 'formbusca' %>
-<hr/>
 
+        <%= render 'formbuscatitulo' %>
+  
 <table>
   <thead>
     <tr>
@@ -31,9 +30,9 @@
         <td><%= jogo.genero %></td>
         <td><%= jogo.plataforma %></td>
         <td><%= jogo.preco %></td>
-        <td><%= link_to ' ', jogo , class: "glyphicon glyphicon-sunglasses" %></td>
-        <td><%= link_to ' ', edit_jogo_path(jogo), class: "glyphicon glyphicon-pencil" %></td>
-        <td><%= link_to ' ', jogo, method: :delete, data: { confirm: 'Tem certeza?' }, class: "glyphicon glyphicon-erase" %></td>
+        <td><%= link_to '', jogo , class: "glyphicon glyphicon-sunglasses" %></td>
+        <td><%= link_to '', edit_jogo_path(jogo), class: "glyphicon glyphicon-pencil" %></td>
+        <td><%= link_to '', jogo, method: :delete, data: { confirm: 'Tem certeza?' }, class: "glyphicon glyphicon-erase" %></td>
       </tr>
     <% end %>
   </tbody>

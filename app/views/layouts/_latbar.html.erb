@@ -2,20 +2,19 @@
 	<div id="sidebar-wrapper">
 		<ul class="sidebar-nav">
 			<li class="sidebar-brand">
-				<a href="#" >
-					<h4>Menu</h4>
-				</a>
+				<li style="font-size: 20px;">
+				<%= link_to ' Home', pagina_home_path,class: "glyphicon glyphicon-home" %>				
 			</li>
 			<li style="font-size: 20px;">
-				<%= link_to ' Jogo', jogos_path,class: "glyphicon glyphicon-home" %>
+				<%= link_to ' Jogo', jogos_path,class: "glyphicon glyphicon-tower" %>
 			</li>
 			<li style="font-size: 20px;">
 				<%= link_to ' Cliente', clientes_path ,
-				class: "glyphicon glyphicon-map-marker"%>
+				class: "glyphicon glyphicon-user"%>
 			</li>
 			<li style="font-size: 20px;">
 				<%= link_to ' Venda', vendas_path ,
-				class: "glyphicon glyphicon-user"%>
+				class: "glyphicon glyphicon-shopping-cart"%>
 			</li>
 		</ul>
 	</div>

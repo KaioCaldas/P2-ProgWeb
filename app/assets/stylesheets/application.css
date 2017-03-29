@@ -19,9 +19,12 @@
 @import "bootstrap";
 body {
 	background-color: #ccc;
-	background: image-url('fundinho.png');
-	
+	background: url('fundinho.png') repeat ;
 }
+.navbar{
+	background: url('game.jpg');
+}
+
 table {
 	width: 100%;
 }
@@ -42,7 +45,8 @@ table {
 	height: 50px;
 }
 
-.panel-body{
-	padding-left: 250px;
-	
+
+
+h4{
+	color: #4f4;
 }
