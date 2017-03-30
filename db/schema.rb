@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315221939) do
+ActiveRecord::Schema.define(version: 20170330003107) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "clientes", force: :cascade do |t|
     t.string   "nome"
@@ -40,8 +43,12 @@ ActiveRecord::Schema.define(version: 20170315221939) do
     t.float    "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "jogo_id"
     t.integer  "cliente_id"
+    t.integer  "jogo_id"
+    t.index ["cliente_id"], name: "index_vendas_on_cliente_id", using: :btree
+    t.index ["jogo_id"], name: "index_vendas_on_jogo_id", using: :btree
   end
 
+  add_foreign_key "vendas", "clientes"
+  add_foreign_key "vendas", "jogos"
 end

@@ -1,5 +1,7 @@
 class Venda < ActiveRecord::Base
-
+	belongs_to :jogo
+	belongs_to :cliente
+	
 	def get_preco
       @jogos = Jogo.all
         @jogos.each do |jogo|
@@ -8,7 +10,4 @@ class Venda < ActiveRecord::Base
           end
         end
     end
-
-    belongs_to :jogo
-    belongs_to :cliente
 end
