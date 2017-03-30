@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170330003107) do
+ActiveRecord::Schema.define(version: 20170330005001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "clientes", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "cpf"
+    t.string   "telefone"
+    t.string   "endereco"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "funcionarios", force: :cascade do |t|
     t.string   "nome"
     t.string   "cpf"
     t.string   "telefone"
@@ -41,14 +51,17 @@ ActiveRecord::Schema.define(version: 20170330003107) do
   create_table "vendas", force: :cascade do |t|
     t.date     "dataVenda"
     t.float    "total"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "cliente_id"
     t.integer  "jogo_id"
+    t.integer  "funcionario_id"
     t.index ["cliente_id"], name: "index_vendas_on_cliente_id", using: :btree
+    t.index ["funcionario_id"], name: "index_vendas_on_funcionario_id", using: :btree
     t.index ["jogo_id"], name: "index_vendas_on_jogo_id", using: :btree
   end
 
   add_foreign_key "vendas", "clientes"
+  add_foreign_key "vendas", "funcionarios"
   add_foreign_key "vendas", "jogos"
 end

@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :funcionario %>
+    <%= f.collection_select :funcionario_id, Funcionario.all, :id, :nome %>
+  </div>
+
+  <div class="field">
     <%= f.label :jogo %>
     <%= f.collection_select :jogo_id, Jogo.all, :id, :titulo, :selected => @venda.jogo%>
   </div>
@@ -33,7 +38,7 @@
 <% end %>
 
 <script type="text/javascript">
-  
+
   $(document).ready(function(){
     $('.datepicker').datepicker({format: 'dd-mm-yyyy'});
   });

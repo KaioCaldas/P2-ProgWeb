@@ -1,6 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Cliente:</strong>
+  <%= @venda.cliente.nome %>
+</p>
+
+<p>
+  <strong>Funcionario</strong>
+  <%= @venda.funcionario.nome %>
+</p>
+
+<p>
+  <strong>Jogo:</strong>
+  <%= @venda.jogo.titulo %>
+</p>
+
+<p>
   <strong>Data da venda:</strong>
   <%= @venda.dataVenda %>
 </p>

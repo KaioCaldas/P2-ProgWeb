@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :funcionarios
   get 'pagina/home'
 
   resources :vendas
