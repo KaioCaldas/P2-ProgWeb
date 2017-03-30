@@ -17,12 +17,9 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 body {
-	background-color: #ccc;
-	background: url('fundinho.png') repeat ;
-}
-.navbar{
-	background: url('game.jpg');
+	background: image-url('fundinho.png') repeat ;
 }
 
 table {
@@ -32,21 +29,11 @@ table {
 .content {
 	background-color: #fff;
 	padding: 20px;
-	margin: 0 -20px; /* indenta o padding negativo para preservar o grid */
+	margin: 0 -20px; 
     -webkit-border-radius: 0 0 6px 6px;
     -moz-border-radius: 0 0 6px 6px;
 	border-radius: 0 0 6px 6px;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
 	box-shadow: 0 1px 2px rgba(0,0,0,.15);
-}
-.logo {
-	width: 120px;
-	height: 50px;
-}
-
-
-
-h4{
-	color: #4f4;
 }
